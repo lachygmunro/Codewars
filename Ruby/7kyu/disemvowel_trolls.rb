@@ -10,12 +10,5 @@
 # Note: for this kata y isn't considered a vowel.
 
 def disemvowel(str)
-  vowels = %w[a e i o u A E I O U]
-  newstr = str.split("")
-  newstr.each do |letter|
-    vowels.each do |v|
-      newstr.delete(letter) if letter == v
-      end
-    end
-  newstr.join("")
+  str.delete("aeiouAEIOU")
 end
